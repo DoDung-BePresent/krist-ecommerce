@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+import { Roboto } from "next/font/google";
+import { ConfigProvider } from "antd";
+import { colors } from "@/constants/colors";
+
+const roboto = Roboto({
+  weight: ["400", "500", "700", "900"],
+  subsets: ["latin"],
+  style: ["italic", "normal"],
 });
 
 export const metadata: Metadata = {
@@ -25,10 +24,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${roboto.className} antialiased`}>
+        <ConfigProvider
+          theme={{
+            token: {
+              fontFamily: roboto.style.fontFamily,
+            },
+            components: {
+              Input: {
+                activeBorderColor: `${colors.primary500}`,
+                hoverBorderColor: `${colors.primary500}`,
+                activeShadow: `${colors.activeShadow}`,
+                colorBorder: `${colors.primary500}`,
+              },
+              Form: {
+                itemMarginBottom: 22,
+              },
+              Checkbox: {
+                colorPrimaryHover: `${colors.primary300}`,
+                colorPrimary: `${colors.primary500}`,
+              },
+            },
+          }}
+        >
+          <AntdRegistry>{children}</AntdRegistry>
+        </ConfigProvider>
       </body>
     </html>
   );
