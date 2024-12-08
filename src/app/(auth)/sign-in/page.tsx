@@ -14,8 +14,8 @@ const SignInPage = () => {
   };
 
   return (
-    <main className="flex flex-row min-h-screen items-center">
-      <div className="w-3/5 hidden md:block">
+    <main className="flex flex-row min-h-screen">
+      <div className="w-1/2 hidden md:block">
         <Image
           src="/sign-in-banner.png"
           width={0}
@@ -26,46 +26,58 @@ const SignInPage = () => {
         />
       </div>
 
-      <div className="w-[300px] md:w-[400px] mx-auto">
-        <div className="mb-5">
-          <h1 className="text-3xl font-semibold mb-2">Welcome👋</h1>
-          <p className="text-sm text-primary300">Please login here</p>
-        </div>
-        <Form
-          form={form}
-          onFinish={handleSubmit}
-          size="large"
-          layout="vertical"
-        >
-          <Form.Item<SignInType>
-            label="Email Address"
-            name="email"
-            rules={SignInRules.email}
-          >
-            <Input placeholder="robertfox@example.com" />
-          </Form.Item>
-          <Form.Item<SignInType>
-            label="Password"
-            name="password"
-            rules={SignInRules.password}
-          >
-            <Input.Password placeholder="Robertfox123*%" />
-          </Form.Item>
-          <div className="flex flex-row items-center justify-between mb-5">
-            <Checkbox>Remember me</Checkbox>
-            <Link href="#" className="text-primary500 hover:text-primary300">
-              Forgot Password?
-            </Link>
-          </div>
-          <Button
-            className="w-full"
-            variant="solid"
-            color="default"
-            htmlType="submit"
-          >
-            Login
+      <div className="w-[300px] md:w-[400px] mx-auto flex flex-col justify-center">
+        <div className="fixed top-5 right-5">
+          <Button variant="solid" color="default">
+            <Link href="/sign-up">Sign Up</Link>
           </Button>
-        </Form>
+        </div>
+        <div className="">
+          <div className="mb-5">
+            <h1 className="text-3xl font-semibold mb-2">
+              Welcome
+              <span className="animate-wave text-3xl inline-block">👋</span>
+            </h1>
+            <p className="text-sm text-primary300">Please login here</p>
+          </div>
+          <Form
+            form={form}
+            onFinish={handleSubmit}
+            size="large"
+            layout="vertical"
+          >
+            <Form.Item<SignInType>
+              label="Email Address"
+              name="email"
+              rules={SignInRules.email}
+              validateTrigger="onBlur"
+            >
+              <Input placeholder="robertfox@example.com" />
+            </Form.Item>
+            <Form.Item<SignInType>
+              label="Password"
+              name="password"
+              rules={SignInRules.password}
+              validateTrigger="onBlur"
+            >
+              <Input.Password placeholder="Robertfox123" />
+            </Form.Item>
+            <div className="flex flex-row items-center justify-between mb-5">
+              <Checkbox>Remember me</Checkbox>
+              <Link href="#" className="text-primary500 hover:text-primary300">
+                Forgot Password?
+              </Link>
+            </div>
+            <Button
+              className="w-full"
+              variant="solid"
+              color="default"
+              htmlType="submit"
+            >
+              Login
+            </Button>
+          </Form>
+        </div>
       </div>
     </main>
   );
