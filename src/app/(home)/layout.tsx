@@ -1,11 +1,12 @@
 import Header from "@/components/header";
 import React from "react";
 
-const HomeLayout = () => {
+const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="container">
+    <div className="container">
       <Header />
-    </main>
+      {children}
+    </div>
   );
 };
 

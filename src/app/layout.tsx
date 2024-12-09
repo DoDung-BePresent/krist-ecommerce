@@ -37,6 +37,14 @@ export default function RootLayout({
                 activeShadow: `${colors.activeShadow}`,
                 colorBorder: `${colors.primary500}`,
               },
+              Button: {
+                defaultBorderColor: `${colors.primary20}`,
+                defaultHoverBorderColor: `${colors.primary20}`,
+                defaultHoverColor: `${colors.black}`,
+                defaultHoverBg: `${colors.primary5}`,
+                defaultActiveBorderColor: `${colors.primary500}`,
+                defaultActiveColor: `${colors.primary500}`,
+              },
               Form: {
                 itemMarginBottom: 22,
               },

@@ -72,3 +72,31 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .section {
+    @apply my-20;
+  }
+}
+
+@layer utilities {
+  .heading-1 {
+    @apply text-6xl;
+  }
+
+  .heading-2 {
+    @apply text-4xl;
+  }
+
+  .heading-3 {
+    @apply text-2xl;
+  }
+
+  .heading-4 {
+    @apply text-lg;
+  }
+
+  .heading-5 {
+    @apply text-base;
+  }
+}
