@@ -109,6 +109,7 @@ const Footer = () => {
                   backgroundColor: "transparent",
                   color: "white",
                   borderColor: "white",
+                  width: "400px",
                 }}
                 prefix={<MessageQuestion size={24} />}
                 suffix={<ArrowRight size={20} />}

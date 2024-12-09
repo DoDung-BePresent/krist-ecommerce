@@ -74,8 +74,16 @@ body,
 }
 
 @layer components {
-  .section {
+  .section-lg {
     @apply my-20;
+  }
+
+  .section-md {
+    @apply my-10;
+  }
+
+  .section-sm {
+    @apply my-5;
   }
 }
 

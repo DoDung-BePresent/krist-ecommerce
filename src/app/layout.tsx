@@ -49,8 +49,18 @@ export default function RootLayout({
                 itemMarginBottom: 22,
               },
               Checkbox: {
-                colorPrimaryHover: `${colors.primary300}`,
+                colorPrimaryHover: `${colors.primary500}`,
                 colorPrimary: `${colors.primary500}`,
+                colorBorder: `${colors.primary500}`,
+              },
+              Slider: {
+                trackBg: `${colors.primary500}`,
+                trackHoverBg: `${colors.primary500}`,
+                handleActiveColor: `${colors.primary500}`,
+                handleActiveOutlineColor: `${colors.primary500}`,
+                handleColor: `${colors.primary500}`,
+                dotActiveBorderColor: `${colors.primary500}`,
+                colorPrimaryBorderHover: `${colors.primary500}`,
               },
             },
           }}

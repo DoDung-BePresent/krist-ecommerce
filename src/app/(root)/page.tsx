@@ -82,7 +82,7 @@ const HomePage = () => {
     <main className="py-5">
       <Banner className="mt-2" />
       {/* Categories */}
-      <div className="section">
+      <div className="section-lg">
         <div className="flex flex-row items-center justify-between">
           <h1 className="heading-2 font-medium">Shop by Categories</h1>
           <CarouselArrow />
@@ -99,7 +99,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Bestseller */}
-      <div className="section">
+      <div className="section-lg">
         <div className="text-center">
           <h1 className="heading-2 font-medium">Out Bestseller</h1>
         </div>
