@@ -5,7 +5,7 @@ import { Button } from "antd";
 
 const Header = () => {
   return (
-    <nav className="bg-white sticky top-0 z-10">
+    <nav className="container sticky top-0 z-10 bg-white">
       <div className="flex flex-row items-center justify-between gap-5 border-b py-5">
         <Image src="/logo.svg" width={150} height={100} alt="Logo" />
         <MainNav className="flex-1" />
