@@ -1,7 +1,6 @@
+import { Breadcrumb } from "antd";
 import ProductList from "@/components/product/product-list";
 import SideBarFilter from "@/components/sidebar-filter";
-import { Breadcrumb } from "antd";
-import React from "react";
 
 const ProductsPage = () => {
   return (

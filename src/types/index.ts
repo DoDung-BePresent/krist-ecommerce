@@ -10,3 +10,8 @@ export type SignUpType = {
   password: string;
   confirmPassword: string;
 };
+
+export interface ImageType {
+  id: string;
+  url: string;
+}

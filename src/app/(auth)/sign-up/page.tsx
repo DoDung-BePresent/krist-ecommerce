@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { SignUpType } from "@/types/auth";
+import { SignUpType } from "@/types";
 import { Button, Checkbox, Form, Input } from "antd";
 import { SignUpRules } from "@/utils/form-rules";
 
@@ -14,8 +14,8 @@ const SignUpPage = () => {
   };
 
   return (
-    <main className="flex flex-row min-h-screen">
-      <div className="w-1/2 hidden md:block">
+    <main className="flex min-h-screen flex-row">
+      <div className="hidden w-1/2 md:block">
         <Image
           src="/sign-up-banner.png"
           width={0}
@@ -26,15 +26,15 @@ const SignUpPage = () => {
         />
       </div>
 
-      <div className="w-[300px] md:w-[400px] mx-auto flex flex-col justify-center">
-        <div className="fixed top-5 right-5">
+      <div className="mx-auto flex w-[300px] flex-col justify-center md:w-[400px]">
+        <div className="fixed right-5 top-5">
           <Button variant="solid" color="default">
             <Link href="/sign-in">Sign In</Link>
           </Button>
         </div>
         <div className="">
           <div className="mb-5">
-            <h1 className="text-3xl font-semibold mb-2">Create New Account</h1>
+            <h1 className="mb-2 text-3xl font-semibold">Create New Account</h1>
             <p className="text-sm text-primary300">Please enter details</p>
           </div>
           <Form
@@ -83,7 +83,7 @@ const SignUpPage = () => {
             >
               <Input.Password placeholder="Robertfox123" />
             </Form.Item>
-            <div className="flex flex-row items-center justify-between mb-5">
+            <div className="mb-5 flex flex-row items-center justify-between">
               <Checkbox>
                 I agree to the{" "}
                 <Link
